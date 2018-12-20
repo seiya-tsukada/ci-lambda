@@ -5,7 +5,7 @@
 ## to zip
 
 ```
-zip -r /tmp/output.zip ./*
+zip -r /tmp/output.zip ./main.py
 ```
 
 ## zip upload to lambda

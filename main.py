@@ -2,12 +2,13 @@
 
 from __future__ import print_function
 import boto3
+from pprint import pprint
 
 lambda_client = boto3.client("lambda")
 code_pipeline = boto3.client("codepipeline")
 
 def lambda_handler(event, context):
-    print(event)
+    pprint(event)
     job_id = event["CodePipeline.job"]["id"]
     job = event["CodePipeline.job"]["data"]
     target_lambda = job["actionConfiguration"]["configuration"]["UserParameters"]
